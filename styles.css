@@ -1,0 +1,324 @@
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #546474;
+}
+/* Background Horizontal */
+@media (orientation: landscape) {
+  body {
+    background-image: url("images/bg-desktop.jpg");
+  }
+}
+
+/* Background Vertical */
+@media (orientation: portrait) {
+  body {
+    background-image: url("images/bg-mobile.jpg");
+  }
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  margin-bottom: 0.5vw;
+}
+p {
+  margin: 0;
+}
+h1,
+h2 {
+  font-size: 10vw;
+  line-height: 10vw;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: -0.4vw;
+  padding: 0;
+  margin: 10vw 0 0 0;
+}
+h2 {
+  font-size: 5vw;
+  line-height: 5vw;
+  letter-spacing: -0.2vw;
+}
+h3 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: normal;
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+  margin: 2rem 0;
+  border: 0;
+}
+
+.map-wrapper {
+  height: 540px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  border: 10px solid #5555ff;
+}
+
+.map-wrapper iframe {
+  margin-top: -60px;
+  height: 600px;
+}
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  margin-top: -3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.section#food-section h3 {
+  color: #e36b0c;
+}
+.section#music-section h3 {
+  color: #6228b4;
+}
+.section#drinks-section h3 {
+  color: #dfac00;
+}
+.section#coworking-section h3 {
+  color: #82b01e;
+}
+.section#lakes-section h3 {
+  color: #3376cf;
+}
+.section#tourist-traps-section h3 {
+  color: #470c0a;
+}
+.section#events-section h3 {
+  color: #000;
+}
+.section#coffee-section h3 {
+  color: #754719;
+}
+.section#general-tips-section h3 {
+  color: #151f79;
+}
+.section#other-section h3 {
+  color: #115e2a;
+}
+
+a.item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.card {
+  width: 250px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 3rem;
+  transition: transform 0.2s ease;
+  text-align: center;
+  padding: 3rem;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+p.intro {
+  font-size: 20px;
+  width: 315px;
+  margin: 5vw auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 3rem;
+  padding: 3rem;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+  transform: rotate(6deg);
+  position: relative;
+  z-index: 100;
+  margin: -4rem 5vw -5vw auto; /* overlap top, push to right */
+}
+
+p.intro strong {
+  font-size: 16px;
+  color: #5555ff;
+}
+
+p.intro a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+h1#logo {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -90000px;
+  z-index: 0;
+}
+
+h1,
+h2 {
+  z-index: 10000;
+  position: relative;
+}
+
+h2#coffee,
+h2#tourist-traps,
+h2#lakes,
+h2#coworking,
+h2#drinks,
+h2#food,
+h2#music,
+h2#general-tips,
+h2#other,
+h2#events {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -90000px;
+}
+
+h2#coffee {
+  background-image: url("images/h2-coffee.png");
+}
+h2#tourist-traps {
+  background-image: url("images/h2-tourist-traps.png");
+}
+h2#lakes {
+  background-image: url("images/h2-lakes.png");
+}
+h2#coworking {
+  background-image: url("images/h2-coworking.png");
+}
+h2#drinks {
+  background-image: url("images/h2-drinks.png");
+}
+h2#food {
+  background-image: url("images/h2-food.png");
+}
+h2#music {
+  background-image: url("images/h2-music.png");
+}
+h2#events {
+  background-image: url("images/h2-events.png");
+}
+h2#general-tips {
+  background-image: url("images/h2-general.png");
+}
+h2#other {
+  background-image: url("images/h2-other.png");
+}
+
+/* Enhanced scattered cards effect with staggered, pseudo-random pattern */
+.section .item:nth-child(3n + 1) .card {
+  transform: rotate(-5deg);
+}
+.section .item:nth-child(3n + 1) .card h3 {
+  font-family: "DynaPuff";
+}
+.section .item:nth-child(4n + 2) .card {
+  border-radius: 20px;
+  transform: rotate(8deg);
+}
+.section .item:nth-child(4n + 2) .card h3 {
+  font-family: "Pirata One";
+}
+
+.section .item:nth-child(5n + 3) .card {
+  transform: rotate(-3deg);
+}
+.section .item:nth-child(5n + 3) .card h3 {
+  font-family: "Spicy Rice";
+}
+.section .item:nth-child(6n + 4) .card {
+  transform: rotate(11deg);
+  border-radius: 100%;
+}
+.section .item:nth-child(7n + 5) .card {
+  border-radius: 0;
+  transform: rotate(-10deg);
+}
+.section .item:nth-child(7n + 5) .card h3 {
+  font-family: Caprasimo;
+}
+.section .item:nth-child(8n + 6) .card {
+  transform: rotate(2deg);
+}
+.section .item:nth-child(8n + 6) .card h3 {
+  font-family: Plaster;
+}
+.section .item:nth-child(9n + 7) .card {
+  border-radius: 20px;
+  transform: rotate(-7deg);
+}
+.section .item:nth-child(10n + 8) .card {
+  transform: rotate(6deg);
+}
+.section .item:nth-child(10n + 8) .card h3 {
+  font-family: Michroma;
+  font-weight: 900;
+}
+.section .item:nth-child(11n + 9) .card {
+  transform: rotate(-12deg);
+}
+.section .item:nth-child(12n + 10) .card {
+  transform: rotate(10deg);
+  border-radius: 0;
+}
+.section .item:nth-child(9) .card,
+.section .item:nth-child(17) .card {
+  transform: rotate(13deg);
+  border-radius: 16px;
+}
+
+.section .item:nth-child(9) .card h3,
+.section .item:nth-child(17) .card h3 {
+  font-family: "Bebas Neue";
+}
+.section .item:nth-child(11) .card,
+.section .item:nth-child(15) .card {
+  transform: rotate(13deg);
+  border-radius: 16px;
+}
+
+.section .item:nth-child(11) .card h3,
+.section .item:nth-child(15) .card h3 {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+.section .item:hover .card {
+  transform: rotate(0deg);
+}
+
+.item:active {
+  transform: scale(1.05);
+  transition: all 0.05s ease;
+}
