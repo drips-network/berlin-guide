@@ -14,14 +14,14 @@ body {
 /* Background Horizontal */
 @media (orientation: landscape) {
   body {
-    background-image: url("images/bg-desktop.jpg");
+    background-image: url("images/bg-desktop.png");
   }
 }
 
 /* Background Vertical */
 @media (orientation: portrait) {
   body {
-    background-image: url("images/bg-mobile.jpg");
+    background-image: url("images/bg-mobile.png");
   }
 }
 h1,
@@ -144,14 +144,20 @@ p.intro {
   margin: 5vw auto;
   text-align: center;
   background-color: white;
-  border-radius: 3rem;
-  padding: 3rem;
+  border-radius: 24px;
+  padding: 32px;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
   font-family: "Inter", sans-serif;
   transform: rotate(6deg);
   position: relative;
   z-index: 100;
   margin: -4rem 5vw -5vw auto; /* overlap top, push to right */
+}
+
+@media (portrait) {
+  p.intro {
+    margin: -4rem 0 -5vw auto;
+  }
 }
 
 p.intro strong {
