@@ -96,7 +96,7 @@ iframe {
 .section {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: -2rem;
   margin-bottom: 4rem;
   margin-top: -3rem;
   align-items: center;
