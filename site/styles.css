@@ -3,13 +3,16 @@ body {
   margin: 0 auto;
   padding: 2rem;
   line-height: 1.6;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  background-attachment: fixed;
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #546474;
+}
+html,
+body {
+  overflow-x: hidden;
 }
 /* Background Horizontal */
 @media (orientation: landscape) {
@@ -48,6 +51,13 @@ h2 {
   line-height: 5vw;
   letter-spacing: -0.2vw;
 }
+
+@media (max-width: 768px) {
+  h2 {
+    transform: translateY(70px);
+  }
+}
+
 h3 {
   font-size: 32px;
   line-height: 40px;
@@ -73,6 +83,16 @@ iframe {
   margin-top: -60px;
   height: 600px;
 }
+
+@media (max-width: 768px) {
+  .map-wrapper iframe {
+    height: 300px;
+  }
+  .map-wrapper {
+    height: 225px;
+  }
+}
+
 .section {
   display: flex;
   flex-wrap: wrap;
@@ -154,9 +174,10 @@ p.intro {
   margin: -4rem 5vw -5vw auto; /* overlap top, push to right */
 }
 
-@media (portrait) {
+@media (orientation: portrait) {
   p.intro {
-    margin: -4rem 0 -5vw auto;
+    margin: -4rem 0 -5vw;
+    transform: scale(0.75) rotate(6deg) translateY(40px);
   }
 }
 
@@ -180,6 +201,12 @@ h1#logo {
   background-size: contain;
   text-indent: -90000px;
   z-index: 0;
+}
+
+@media (orientation: portrait) {
+  h1#logo {
+    height: 260px;
+  }
 }
 
 h1,
@@ -316,15 +343,15 @@ h2#other {
   font-weight: bold;
 }
 
-.item:hover {
-  transform: scale(1.1);
-}
-
-.section .item:hover .card {
-  transform: rotate(0deg);
-}
-
-.item:active {
-  transform: scale(1.05);
-  transition: all 0.05s ease;
+@media (min-width: 769px) {
+  .item:hover {
+    transform: scale(1.1);
+  }
+  .section .item:hover .card {
+    transform: rotate(0deg);
+  }
+  .item:active {
+    transform: scale(1.05);
+    transition: all 0.05s ease;
+  }
 }
