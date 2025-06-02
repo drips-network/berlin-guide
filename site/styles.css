@@ -142,6 +142,7 @@ a.item {
   text-decoration: none;
   color: inherit;
   transition: all 0.2s ease;
+  position: relative;
 }
 
 .card {
@@ -152,10 +153,12 @@ a.item {
   justify-content: space-between;
   background-color: white;
   border-radius: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.1)
   transition: transform 0.2s ease;
   text-align: center;
   padding: 3rem;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 p.intro {
@@ -343,15 +346,55 @@ h2#other {
   font-weight: bold;
 }
 
+
+.section > .item:nth-child(1) {
+	z-index: 12;
+}
+.section > .item:nth-child(2) {
+	z-index: 11;
+}
+.section > .item:nth-child(3) {
+	z-index: 10;
+}
+.section > .item:nth-child(4) {
+	z-index: 9;
+}
+.section > .item:nth-child(5) {
+	z-index: 8;
+}
+.section > .item:nth-child(6) {
+	z-index: 7;
+}
+.section > .item:nth-child(7) {
+	z-index: 6;
+}
+.section > .item:nth-child(8) {
+	z-index: 5;
+}
+.section > .item:nth-child(9) {
+	z-index: 4;
+}
+.section > .item:nth-child(10) {
+	z-index: 3;
+}
+.section > .item:nth-child(11) {
+	z-index: 2;
+}
+.section > .item:nth-child(12) {
+	z-index: 1;
+}
+
 @media (min-width: 769px) {
   .item:hover {
-    transform: scale(1.1);
-  }
-  .section .item:hover .card {
-    transform: rotate(0deg);
+	transform: scale(1.1);
+	z-index: 1000;
+}
+.section .item:hover .card {
+	transform: rotate(0deg);
+	z-index: 1000;
   }
   .item:active {
-    transform: scale(1.05);
-    transition: all 0.05s ease;
+	transform: scale(1.05);
+	transition: all 0.05s ease;
   }
 }
